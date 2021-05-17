@@ -8,6 +8,41 @@
 
 ## ステップ1
 
+第１引数には行数，第２引数にファイル名が与えられます．
+与えられたファイルを先頭から指定された行数までを標準出力に出力しなさい．
+
 ### 入出力例
 
+```sh
+./head 2 main.c # <- main.c の最初の２行を出力する．
+#include <stdio.h>
+#include <stdlib.h>
+```
+
+## ステップ2
+
+引数に複数のファイルが指定された場合，各ファイルを同様に処理しなさい．
+
+### 入出力例
+
+```sh
+./head 2 main.c README.md # <- main.c, README.md の最初の２行を出力する．
+#include <stdio.h>    # <- main.c の内容．
+#include <stdlib.h>
+# Head                # <- この行から README.md の内容．
+
+```
+
+## ステップ3
+
+引数にファイル名が与えられなかった場合は，標準入力から受け取りなさい．
+
+### 入出力例
+
+
+```sh
+cat main.c | ./head 2 # <- 標準入力（main.c）の最初の２行を出力する．
+#include <stdio.h>    # <- main.c の内容．
+#include <stdlib.h>
+```
 
